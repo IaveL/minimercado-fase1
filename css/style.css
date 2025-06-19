@@ -1,0 +1,36 @@
+/* /* Estiliza o carrossel */
+.carousel {
+    max-width: 80%; /* Ajusta a largura do carrossel */
+    margin: 20px auto; /* Centraliza na tela */
+    border-radius: 15px; /* Bordas arredondadas */
+    overflow: hidden; /* Mantém a borda arredondada no carrossel */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+li {
+    list-style: none; /* Remove os marcadores da lista */
+    color: #ffffff; /* Cor do texto */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Inverte as cores dos ícones de controle do carrossel para ter contraste no fundo branco*/
+}

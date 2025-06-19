@@ -4,57 +4,217 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato - Minimercado Da Paixão</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script src="/js/contato.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Minimercado Da Paixão</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Minimercado da Paixão!</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-primary text-white ms-lg-2 mt-2 mt-lg-0"
+                  href="contato.html"
+                  >Cadastre-se</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-success text-white ms-lg-2 mt-2 mt-lg-0"
+                  href="servicos.html"
+                  >Agendar Entrega</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <hr />
     </header>
 
-    <main>
-      <h2>Entre em Contato Conosco</h2>
+    <main class="container my-5">
+      <h2 class="mb-4 text-center">
+        Cadastre-se para entrar em contato conosco
+      </h2>
 
-      <section>
-        <h3>Nossa Localização</h3>
-        <p><strong>Minimercado Da Paixão</strong></p>
-        <p>Rua das Compras Felizes, 123</p>
-        <p>Bairro Alegria</p>
-        <p>Cidade Exemplo, UF</p>
-        <p>CEP: 12345-678</p>
-      </section>
-      <hr />
+      <div class="row">
+        <!-- Coluna esquerda: Informações de contato -->
+        <div class="col-md-6 mb-4">
+          <h4>Informações de Contato</h4>
+          <p><strong>Telefone Principal:</strong> (21) 3241-1023</p>
+          <p><strong>WhatsApp:</strong> (21) 9999-9999</p>
+          <p><strong>Email:</strong> email@minimercadopaixao.com.br</p>
+          <p>
+            <strong>Endereço:</strong> Rua das Compras Felizes, 123 – Bairro
+            Alegria
+          </p>
+          <p><strong>Horário:</strong> Seg a Sáb: 08h–20h | Dom: 09h–13h</p>
+        </div>
 
-      <section>
-        <h3>Informações de Contato</h3>
-        <p><strong>Telefone Principal:</strong> (21) 3241-1023</p>
-        <p><strong>WhatsApp para Pedidos:</strong> (21) 9999-9999</p>
-        <p><strong>Email:</strong> email@minimercadopaixao.com.br</p>
-      </section>
-      <hr />
+        <!-- Coluna direita: Formulário de cadastro -->
+        <div class="col-md-6">
+          <h4>Formulário de Cadastro</h4>
+          <form id="formCadastro">
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome completo *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nome"
+                placeholder="Ex: Maria Silva"
+                required
+              />
+            </div>
 
-      <section>
-        <h3>Horário de Funcionamento</h3>
-        <p><strong>Segunda a Sábado:</strong> 08:00 - 20:00</p>
-        <p><strong>Domingos e Feriados:</strong> 09:00 - 13:00</p>
-      </section>
-      <hr />
+            <div class="mb-3">
+              <label for="endereco" class="form-label">Endereço *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="endereco"
+                placeholder="Rua, número, bairro"
+                required
+              />
+            </div>
 
-      <section>
-        <p><a href="index.html">Voltar para a Página Inicial</a></p>
-      </section>
+            <div class="mb-3">
+              <label for="cpf" class="form-label">CPF *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cpf"
+                placeholder="000.000.000-00"
+                required
+                pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label d-block">Sexo *</label>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="sexoMasculino"
+                  value="Masculino"
+                  required
+                />
+                <label class="form-check-label" for="sexoMasculino"
+                  >Masculino</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="sexoFeminino"
+                  value="Feminino"
+                  required
+                />
+                <label class="form-check-label" for="sexoFeminino"
+                  >Feminino</label
+                >
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sexo"
+                  id="sexoOutro"
+                  value="Outro"
+                  required
+                />
+                <label class="form-check-label" for="sexoOutro">Outro</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="telefone" class="form-label">Telefone *</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="telefone"
+                placeholder="(00) 0000-0000"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail *</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="email@exemplo.com"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="idade" class="form-label">Idade</label>
+              <input
+                type="number"
+                class="form-control"
+                id="idade"
+                min="0"
+                max="120"
+              />
+            </div>
+
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="termos"
+                required
+              />
+              <label class="form-check-label" for="termos">
+                Li e aceito os termos de uso *
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Criar Conta
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <hr />
-      <p>&copy; 2024 Minimercado Da Paixão. Todos os direitos reservados.</p>
+    <footer id="contato" class="bg-dark text-white text-center p-3 mt-4">
+      <p>&copy; 2025 Minimercado Da Paixão. Todos os direitos reservados.</p>
+      <p>Desenvolvido por: Igor Avelino</p>
+      <p>Contato: (21)9-9999-9999 | email@minimercadopaixao.com.br</p>
+      <p>Endereço: Rua das Compras Felizes, 123 - Bairro Alegria</p>
     </footer>
+    <!-- JS separado -->
+    <script src="js/cadastro.js"></script>
   </body>
 </html>

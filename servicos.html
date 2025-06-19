@@ -4,55 +4,120 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serviços</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/servicos.css" />
+    <script src="/js/servicos.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>Minimercado Da Paixão</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Minimercado da Paixão!</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="produtos.html">Produtos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicos.html">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-primary text-white ms-lg-2 mt-2 mt-lg-0"
+                  href="contato.html"
+                  >Cadastre-se</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-success text-white ms-lg-2 mt-2 mt-lg-0"
+                  href="servicos.html"
+                  >Agendar Entrega</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-      <hr />
     </header>
+    <main>
+      <section id="servicos" class="container my-5">
+        <h2 class="mb-4">Nossos Serviços</h2>
 
-    <section id="servicos">
-      <h3>Nossos Serviços</h3>
-      <div>
-        <h4>Entrega em Domicílio</h4>
-        <p>
-          Descrição: Levamos suas compras até você! Consulte nossa área de
-          entrega e taxas.
-        </p>
-        <p>Valor: A partir de R$ 5,00 (varia conforme a distância)</p>
-      </div>
-      <br />
-      <div>
-        <h4>Recarga de Celular</h4>
-        <p>
-          Descrição: Recarregue os créditos do seu celular pré-pago de diversas
-          operadoras de forma rápida e prática.
-        </p>
-        <p>Valor: Conforme o valor da recarga desejada.</p>
-      </div>
-    </section>
+        <div class="row">
+          <!-- Coluna de serviços -->
+          <div class="col-md-8">
+            <section class="my-4">
+              <h3>📦 Retirada no Local - <strong>Gratuito</strong></h3>
+              <p>
+                Faça seu pedido online e retire no minimercado no horário que
+                for mais conveniente para você. Assim, você economiza tempo e
+                evita filas.
+              </p>
+            </section>
 
-    <footer id="contato">
+            <section class="my-4">
+              <h3>🚚 Tele-entrega - <strong>R$ 10,00</strong></h3>
+              <p>
+                Se preferir mais comodidade, entregamos suas compras no seu
+                endereço com rapidez e segurança.
+              </p>
+              <p>
+                <strong>Áreas atendidas:</strong> Rio de Janeiro e Capital
+                metropolitana.
+              </p>
+            </section>
+
+            <section class="my-4">
+              <h3>📱 Recarga de celular</h3>
+              <p>
+                Oferecemos recarga de celular para diversas operadoras,
+                facilitando sua vida na hora de manter seu celular sempre ativo.
+              </p>
+            </section>
+          </div>
+
+          <!-- Coluna de agendamento -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3">
+              <h4 class="mb-3 text-center">📅 Agendar Entrega ou Retirada</h4>
+
+              <label for="data" class="form-label">Escolha uma data:</label>
+              <input type="date" id="data" class="form-control mb-3" />
+
+              <label for="hora" class="form-label">Escolha um horário:</label>
+              <input type="time" id="hora" class="form-control mb-3" />
+
+              <button class="btn btn-primary w-100" onclick="agendar()">
+                Agendar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contato" class="bg-dark text-white text-center p-3 mt-4">
       <p>&copy; 2025 Minimercado Da Paixão. Todos os direitos reservados.</p>
       <p>Desenvolvido por: Igor Avelino</p>
       <p>Contato: (21)9-9999-9999 | email@minimercadopaixao.com.br</p>
       <p>Endereço: Rua das Compras Felizes, 123 - Bairro Alegria</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="servicos.html">Serviços</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
     </footer>
   </body>
 </html>
